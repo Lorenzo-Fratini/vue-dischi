@@ -16,7 +16,7 @@ function init() {
 
         discs: [],
         genres: [],
-        selected: ''
+        selected: 'all'
       },
 
       methods: {
