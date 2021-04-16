@@ -15,14 +15,14 @@
       <div class="select-cont">
         <label for="genre">Choose a genre:</label>
         <select name="genre" v-model="selected">
-          <option value="all" selected="selected">All</option>
+          <option value="all">All</option>
           <option v-for="genre in genres" :value="genre">
             {{ genre }}
           </option>
         </select>
       </div>
       <div class="cont">
-        <div v-for="disc in discs" class="card" :class="disc.genre == selected || selected == 'all' ? '' : 'display-none'">
+        <div v-for="(disc, index) in discs" class="card" :class="genreSelect(index)">
           <div class="card-img">
             <img :src="disc.poster" alt="">
           </div>

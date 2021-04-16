@@ -18,6 +18,19 @@ function init() {
         genres: [],
         selected: ''
       },
+
+      methods: {
+        
+        genreSelect: function(index) {
+
+          const disc = this.discs[index];
+
+          const active = disc.genre == this.selected 
+            || this.selected == 'all' ? '' : 'display-none';
+          
+          return active;
+        }
+      },
       
       mounted () {
 
